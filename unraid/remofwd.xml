@@ -10,7 +10,7 @@
   <Overview>
     Remo datapoint forwarder
   </Overview>
-  <Registry>https://registry.hub.docker.com/r/toruta3l/remofwd/</Registry>
+  <Registry>https://registry.hub.docker.com/r/toruta3l/remofwd</Registry>
   <Repository>toruta39/remofwd</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
