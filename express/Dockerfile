@@ -1,10 +1,9 @@
-FROM alpine:3.10
+FROM node:16-alpine3.11
 
 RUN apk add --no-cache inotify-tools
-RUN apk add --no-cache nodejs-current npm
 
 COPY ./package.json /app/package.json
-COPY ./package-lock.json /app/package-lock.json
+COPY ./yarn.lock /app/yarn.lock
 COPY ./tsconfig.json /app/tsconfig.json
 COPY ./nodemon.json /app/nodemon.json
 
@@ -12,9 +11,9 @@ VOLUME /app/src
 
 WORKDIR /app
 
-RUN ["npm", "i"]
+RUN ["yarn"]
 
 EXPOSE 3000
 
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["yarn", "start"]
 
