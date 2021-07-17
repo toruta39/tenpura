@@ -12,6 +12,6 @@ func main() {
 		fmt.Fprint(w, "ok")
 	})
 
-	logrus.Info("Listening at 8080")
-	logrus.Fatal(http.ListenAndServe(":8080", nil))
+	logrus.Info("Listening at 3000")
+	logrus.Fatal(http.ListenAndServe(":3000", nil))
 }

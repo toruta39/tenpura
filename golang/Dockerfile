@@ -1,4 +1,4 @@
-FROM golang:1.14-alpine AS builder
+FROM golang:1.16-alpine AS builder
 
 WORKDIR /build
 
@@ -20,7 +20,7 @@ COPY --from=builder /dist/main /app/main
 
 WORKDIR /app
 
-EXPOSE 8080
+EXPOSE 3000
 
 ENTRYPOINT ["./main"]
 
