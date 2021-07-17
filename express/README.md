@@ -15,7 +15,6 @@ The container will expose the server at port 3000, modify
 
 ## TODO
 
-- logging
 - build
 - test
 - deploy

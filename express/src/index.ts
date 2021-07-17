@@ -1,8 +1,11 @@
-import express from 'express'
+import express, { Request, Response } from 'express'
+import morgan from 'morgan'
 
 const app = express()
 
-app.get('/', (req, res) => {
+app.use(morgan('combined'))
+
+app.get('/', (req: Request, res: Response) => {
   res.send('ok')
 })
 
